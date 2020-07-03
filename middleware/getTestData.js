@@ -43,6 +43,6 @@ c.queue([{
     html: '<p>This is a <strong>test</strong></p>'
 }]);
 
-exports {
+module.exports = {
     c
 }
