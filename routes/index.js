@@ -1,10 +1,10 @@
 var express = require('express');
 var router = express.Router();
-let getTestData = require('../middleware/getTestData2')
+let codeListService = require('../service/codeListService')
 
 /* GET home page. */
 router.get('/', function (req, res, next) {
-  getTestData.getCodeList().then(data => {
+  codeListService.getCodeList().then(data => {
     res.render('index', { title: 'Express', codeList: data });
   });
 });
