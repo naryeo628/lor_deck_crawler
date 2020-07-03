@@ -6,12 +6,11 @@ function getCodeList() {
         let data = response.data;
         let archetypes = data.archetypes
         //console.log(archetypes);
-        let num = 0;
         let numStr = "";
         let codeList = new Array;
-        archetypes.forEach(element => {
+        archetypes.forEach(function(element, index) {
+            let num = index + 1;
             let code = {};
-            num++;
             if(num < 10) {
                 numStr = "0" + num;
             } else {
