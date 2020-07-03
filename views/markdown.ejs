@@ -5,11 +5,10 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-    <a href="/markdown">markdown page</a>
     <p><% codeList.forEach(code => {
       %>
-      <%= code.title %> <br>
-      <%= code.code %> <br>
+      ### <%= code.title %> <br><br>
+      <%= code.code %> <br><br>
       <%
     }) %></p>
   </body>
